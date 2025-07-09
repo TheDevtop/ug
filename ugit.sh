@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# uGit: Utility for minimalist git servers
+# Ug: Utility for minimalist git servers
 # Thijs Haker
 
 UGSSH="user@hostname"
@@ -9,12 +9,12 @@ UGROOT="/srv/repos/"
 usage()
 {
     cat << EOF
-usage: ugit [command]
+usage: ug [command]
 commands:
-    init/mk     (Initialize new repository)
-    list/ls     (List repositories)
-    clone/cp    (Clone a repository)
-    remove/rm   (Remove a repository)
+    mk/init     (Initialize new repository)
+    ls/list     (List repositories)
+    cp/clone    (Clone a repository)
+    rm/remove   (Remove a repository)
 EOF
     return 1
 }
@@ -45,10 +45,10 @@ if [ $# -lt 1 ]; then
     exit $?
 fi
 case $1 in
-    ("init" | "mk") ug_init $@ ;;
-    ("list" | "ls") ug_list $@ ;;
-    ("clone" | "cp") ug_clone $@ ;;
-    ("remove" | "rm") ug_remove $@ ;;
+    ("mk" | "init") ug_init $@ ;;
+    ("ls" | "list") ug_list $@ ;;
+    ("cp" | "clone") ug_clone $@ ;;
+    ("rm" | "remove") ug_remove $@ ;;
     (*) usage ;;
 esac
 exit $?
