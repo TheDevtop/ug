@@ -2,6 +2,7 @@ services:
   git:
     image: foobar
     restart: always
+    pull_policy: always
     ports:
       - "22"
     volumes:

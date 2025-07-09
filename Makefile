@@ -1,5 +1,5 @@
 build:
-	@cp ugit.sh ug
+	@cp ug.sh ug
 	@chmod a+x ug
 
 clean:

@@ -6,7 +6,7 @@ The **client** is a shell script that uses SSH to manage those repositories.
 
 ### Install
 
-- Open ugit.sh.
+- Open ug.sh.
 - Change the `UGSSH` variable.
 - Execute `$ make`.
 - Copy the file to a directory in your `PATH`.
