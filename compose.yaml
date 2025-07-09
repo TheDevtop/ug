@@ -7,7 +7,6 @@ services:
       - "22"
     volumes:
       - git_data:/srv/repos
-      - ./keys:/root/.ssh/authorized_keys
 
 volumes:
   git_data:
